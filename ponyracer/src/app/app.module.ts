@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { PonyComponent } from './pony/pony.component';
 import { RacesComponent } from './races/races.component';
 
+import { RaceService } from './race.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,7 @@ import { RacesComponent } from './races/races.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [RaceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
