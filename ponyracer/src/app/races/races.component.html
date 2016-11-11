@@ -1,0 +1,11 @@
+<div *ngIf="races.length > 0">
+  <h2>
+    Races!
+  </h2>
+  <p>{{races.length}} races!</p>
+  <ul>
+    <li *ngFor="let race of races">{{race.name}}</li>
+  </ul>
+</div>
+<button (click)="refreshRaces()">Refresh</button>
+
