@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RacesComponent implements OnInit {
 
-  races: Array<any> = [];
+  races: Array<any> = [{name: 'Red Pony'},{name: 'Fastest Deadliest Pony'}];
 
   constructor() { }
 

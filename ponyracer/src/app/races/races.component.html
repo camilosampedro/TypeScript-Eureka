@@ -4,7 +4,7 @@
   </h2>
   <p>{{races.length}} races!</p>
   <ul>
-    <li *ngFor="let race of races">{{race.name}}</li>
+    <li *ngFor="let race of races; let isEven = even" [style.color]="isEven ? 'green' : 'black'">{{race.name}}</li>
   </ul>
 </div>
 <button (click)="refreshRaces()">Refresh</button>
