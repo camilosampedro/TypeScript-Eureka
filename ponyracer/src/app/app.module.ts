@@ -9,6 +9,7 @@ import {RacesComponent} from './races/races.component';
 
 import {RaceService} from './race.service'
 import {FakeraceService} from "./fakerace.service";
+import { PoniesComponent } from './ponies/ponies.component';
 
 const IS_PROD = false;
 
@@ -16,7 +17,8 @@ const IS_PROD = false;
   declarations: [
     AppComponent,
     PonyComponent,
-    RacesComponent
+    RacesComponent,
+    PoniesComponent
   ],
   imports: [
     BrowserModule,

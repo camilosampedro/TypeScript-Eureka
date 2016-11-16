@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {Pony} from "../pony";
 
 @Component({
   selector: 'app-pony',
@@ -7,15 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PonyComponent implements OnInit {
 
+  @Input() pony: Pony;
+  @Output() ponySelected: EventEmitter<Pony> = new EventEmitter<Pony>();
+
   quantityOfUsers: number = 1415;
 
   constructor() {
     this.quantityOfUsers = 141920;
   }
 
-  ngOnInit() {
+  /**
+   * Selects a pony when the component is clicked.
+   * Emits a custom event.
+   */
+  selectPony(){
+    this.ponySelected.emit(this.pony)
   }
 
-
-
+  ngOnInit() {
+  }
 }

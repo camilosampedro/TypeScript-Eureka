@@ -1,0 +1,5 @@
+<div>
+  <h2>Ponies</h2>
+  <!--The pony is handled to PonyComponent via [pony]="currentPony"-->
+    <app-pony *ngFor="let currentPony of ponies" [pony]="currentPony" (ponySelected)="betOnPony($event)"></app-pony>
+</div>
