@@ -10,7 +10,10 @@ describe('Service: Race', () => {
     });
   });
 
-  it('should ...', inject([RaceService], (service: RaceService) => {
+  it('should retrieve the races', async(inject([RaceService], (service: RaceService) => {
+    service.list().then(races => {
+      expect(races.length).toBe(2);
+    });
     expect(service).toBeTruthy();
-  }));
+  })));
 });
